@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons8-calculator-96.webp" type="image/x-icon">
+    <title>Compound Interest Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Compound Interest Calculator</h1>
+        <form id="interestForm">
+            <label for="principal">Principal Amount:</label>
+            <input type="number" id="principal" required>
+
+            <label for="rate">Annual Interest Rate (%):</label>
+            <input type="number" id="rate" step="0.01" required>
+
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" required>
+
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" required>
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        <div id="results">
+            <h2>Results</h2>
+            <table id="resultTable">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Starting Balance</th>
+                        <th>Interest Earned</th>
+                        <th>Ending Balance</th>
+                    </tr>
+                </thead>
+                <tbody id="resultBody"></tbody>
+            </table>
+            <button id="copyButton" style="display: none;">Copy Table</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
